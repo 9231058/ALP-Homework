@@ -3,8 +3,8 @@ using GLPK
 using GLPKMathProgInterface
 
 m = Model()
-@variable(m, x[1:4] >= 0)
-@variable(m, y[1:4] >= 0)
+@variable(m, x[1:4] >= 0, Int)
+@variable(m, y[1:4] >= 0, Int)
 @constraint(m, x[1] + y[1] + x[4] + y[4] + y[3] >= 12)
 @constraint(m, x[2] + y[2] + x[1] + y[1] + y[4] >= 8)
 @constraint(m, x[3] + y[3] + x[2] + y[2] + y[1] >= 6)
