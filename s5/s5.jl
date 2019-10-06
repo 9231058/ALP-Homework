@@ -4,7 +4,7 @@ using GLPKMathProgInterface
 
 m = Model()
 @variable(m, x[0:5] >= 0)
-@constraint(m, x[2] * 2 + x[3] * 2 + x[4] * 3 + x[5] <= 25000)
+@constraint(m, x[0] * 2 + x[3] * 2 + x[4] * 3 + x[5] <= 25000)
 @constraint(m, x[1] <= 5000)
 @constraint(m, x[2] + x[3] <= 5000)
 @constraint(m, x[4] + x[5] <= 3000)
