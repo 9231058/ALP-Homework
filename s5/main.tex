@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\usepackage[margin=1.5in]{geometry} % Please keep the margins at 1.5 so that there is space for grader comments.
+\usepackage{amsmath,amsthm,amssymb,hyperref}
+
+\newcommand{\R}{\mathbf{R}}  
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Q}{\mathbf{Q}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{claim}[2][Claim]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+
+\large % please keep the text at this size for ease of reading.
+
+% ------------------------------------------ %
+%                 START HERE             %
+% ------------------------------------------ %
+
+{\Large Session 5 % Replace with appropriate page number 
+\hfill  Advanced Linear Programming I}
+
+\begin{center}
+{\Large Parham Alvani - 98131910} % Replace "Author's Name" with your name
+\end{center}
+\vspace{0.05in}
+
+% -----------------------------------------------------
+% The "enumerate" environment allows for automatic problem numbering.
+% To make the number for the next problem, type " \item ". 
+% To make sub-problems such as (a), (b), etc., use an "enumerate" within an "enumerate."
+% -----------------------------------------------------
+
+\begin{enumerate}
+
+\item Section 3.8 Problem 12
+\begin{itemize}
+\item \(x_0\) amount of raw materials
+\item \(x_1\) amount of sold product 1
+\item \(x_2\) amount of sold product 2
+\item \(x_{12}\) amount of sold product 2 that is created from product 1
+\item \(x_{13}\) amount of sold product 3 that is created from product 1
+\item \(x_{23}\) amount of sold product 3 that is created from product 2
+\end{itemize}
+\par
+Here we are assuming that there is no way for creating product 3 from the product 2 that was created from product 1.
+\par
+Objective Function:
+\[
+    \max\quad10x_1 + 20 (x_2 + x_{12}) + 30 (x_{13} + x_{23}) - 25x_0 - x_2 - x_{12} - 2x_{13} - 6x_{23}
+\]
+s.t.
+\[
+    2x_0 + 3x_{12} + 3x_{13} + x_{23} \le 25000
+\]
+\[
+    x_1 \le 5000
+\]
+\[
+    x_2 + x_{12} \le 5000
+\]
+\[
+    x_{13} + x_{23} \le 3000
+\]
+\[
+    3x_0  = x_1 + x_{12} + x_{13}
+\]
+\[
+    x_0  = x_2 + x_{23}
+\]
+
+\end{enumerate}
+
+% ---------------------------------------------------
+% Anything after the \end{document} will be ignored by the typesetting.
+% ----------------------------------------------------
+
+\end{document}
