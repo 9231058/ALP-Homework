@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\usepackage[margin=1.5in]{geometry} % Please keep the margins at 1.5 so that there is space for grader comments.
+\usepackage{amsmath,amsthm,amssymb,hyperref}
+
+\newcommand{\R}{\mathbf{R}}  
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Q}{\mathbf{Q}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{claim}[2][Claim]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+
+\large % please keep the text at this size for ease of reading.
+
+% ------------------------------------------ %
+%                 START HERE             %
+% ------------------------------------------ %
+
+{\Large Session 7 % Replace with appropriate page number 
+\hfill  Advanced Linear Programming I}
+
+\begin{center}
+{\Large Parham Alvani - 98131910} % Replace "Author's Name" with your name
+\end{center}
+\vspace{0.05in}
+
+% -----------------------------------------------------
+% The "enumerate" environment allows for automatic problem numbering.
+% To make the number for the next problem, type " \item ". 
+% To make sub-problems such as (a), (b), etc., use an "enumerate" within an "enumerate."
+% -----------------------------------------------------
+
+\begin{enumerate}
+
+\item Section 3.11 Problem 4
+\begin{itemize}
+\item \(x_i\) bond i --- sell
+\item \(y_i\) bond i --- buy
+\item \(s_i\) slack in the \(i\)th year
+\end{itemize}
+\par
+Objective Function:
+\[
+    \max\quad990 x_1 + 985 x_2 + 972 x_3 + 954 x_4 - 980 y_1 - 970 y_2 - 960 y_3 - 940 y_4
+\]
+s.t.
+\[
+    100 x_1 + 80 x_2 + 70 x_3 + 60 x_4 + s_1 = 100 y_1 + 80 y_2 + 70 y_3 + 60 y_4
+\]
+\[
+    0.9 (110 x_1 + 90 x_2 + 80 x_3 + 50 x_4) + s_2 = 0.9 (110 y_1 + 90 y_2 + 80 y_3 + 50 y_4) + s_1
+\]
+\[
+    0.81 (1100 x_1 + 1120 x_2 + 1090 x_3 + 1110 x_4) + s_3 = 0.81 (1100 y_1 + 1120 y_2 + 1090 y_3 + 1110 y_4) + s_2
+\]
+\[
+    0 \le x_i \le 1000 \quad \forall i \in {1,2,3,4}
+\]
+\[
+    0 \le y_i \le 1000 \quad \forall i \in {1,2,3,4}
+\]
+\[
+    0 \le s_i \quad \forall i \in {1,2,3}
+\]
+
+\end{enumerate}
+
+% ---------------------------------------------------
+% Anything after the \end{document} will be ignored by the typesetting.
+% ----------------------------------------------------
+
+\end{document}
