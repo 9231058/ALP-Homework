@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage[margin=1.5in]{geometry} % Please keep the margins at 1.5 so that there is space for grader comments.
+\usepackage{amsmath,amsthm,amssymb,hyperref}
+
+\newcommand{\R}{\mathbf{R}}  
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Q}{\mathbf{Q}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{claim}[2][Claim]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+
+\large % please keep the text at this size for ease of reading.
+
+% ------------------------------------------ %
+%                 START HERE             %
+% ------------------------------------------ %
+
+{\Large Session 6 % Replace with appropriate page number 
+\hfill  Advanced Linear Programming I}
+
+\begin{center}
+{\Large Parham Alvani - 98131910} % Replace "Author's Name" with your name
+\end{center}
+\vspace{0.05in}
+
+% -----------------------------------------------------
+% The "enumerate" environment allows for automatic problem numbering.
+% To make the number for the next problem, type " \item ". 
+% To make sub-problems such as (a), (b), etc., use an "enumerate" within an "enumerate."
+% -----------------------------------------------------
+
+\begin{enumerate}
+
+\item Section 3.10 Problem 4
+\begin{itemize}
+    \item \(x_{i,j,k}\) the number of product k that is produced with the production line i in month j
+    \item \(s_{i,j}\) the number of product i that is stored on month j
+\end{itemize}
+\par
+Objective Function:
+\[
+    \min 5(0.15x_{1,1,1} + 0.12x_{1,1,2} + 0.16x_{2,1,1} + 0.14x_{2,1,2} + 0.15x_{1,2,1} + 0.12x_{1,2,2} + 0.16x_{2,2,1} + 0.14x_{2,2,2})
+\]
+\[
+    + 0.2 (s_{1,1} + x_{2,1})
+\]
+s.t.
+\[
+    0.15 x_{1,1,1} + 0.12 x_{1,1,2} \le 800
+\]
+\[
+    0.16 x_{2,1,1} + 0.14 x_{2,1,2} \le 2000
+\]
+\[
+    0.15 x_{1,2,1} + 0.12 x_{1,2,2} \le 400
+\]
+\[
+    0.16 x_{2,2,1} + 0.14 x_{2,2,2} \le 1200
+\]
+\[
+    s_{2, 2} \ge 1000
+\]
+\[
+    s_{2, 2} \ge 1000
+\]
+\[
+    500 + x_{1,1,1} + x_{2,1,1} = s_{1,1} + 5000
+\]
+\[
+    750 + x_{1,1,2} + x_{2,1,2} = s_{2,1} + 2000
+\]
+\[
+    s_{1,1} + x_{1,2,1} + x_{2,2,1} = s_{1, 2} + 8000
+\]
+\[
+    s_{2,1} + x_{1,2,2} + x_{2,2,2} = s_{2, 2} + 4000
+\]
+\[
+    x_{i,j,k} \ge 0 \quad \forall i, j, k \in {1, 2}
+\]
+\[
+    s_{i,j} \ge 0 \quad \forall i, j \in {1, 2}
+\]
+
+\end{enumerate}
+
+% ---------------------------------------------------
+% Anything after the \end{document} will be ignored by the typesetting.
+% ----------------------------------------------------
+
+\end{document}
