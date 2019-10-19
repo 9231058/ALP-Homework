@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[margin=1.5in]{geometry} % Please keep the margins at 1.5 so that there is space for grader comments.
+\usepackage{amsmath,amsthm,amssymb,hyperref}
+
+\newcommand{\R}{\mathbf{R}}  
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Q}{\mathbf{Q}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{claim}[2][Claim]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+
+\large % please keep the text at this size for ease of reading.
+
+% ------------------------------------------ %
+%                 START HERE             %
+% ------------------------------------------ %
+
+{\Large Session 8 % Replace with appropriate page number 
+\hfill  Advanced Linear Programming I}
+
+\begin{center}
+{\Large Parham Alvani - 98131910} % Replace "Author's Name" with your name
+\end{center}
+\vspace{0.05in}
+
+% -----------------------------------------------------
+% The "enumerate" environment allows for automatic problem numbering.
+% To make the number for the next problem, type " \item ". 
+% To make sub-problems such as (a), (b), etc., use an "enumerate" within an "enumerate."
+% -----------------------------------------------------
+
+\begin{enumerate}
+
+\item 3 Review Problems Problem 51
+\begin{itemize}
+\item \(x_i\) number of transistor that is created from method \(i\)
+\item \(y_j\) number of transistor in the refine process from grade \(j\)
+\end{itemize}
+\par
+Objective Function:
+\[
+    \min\quad 50 x_1 + 70 x_2 + 25 (\sum_{j=0}^3y_j)
+\]
+s.t.
+\[
+    y_0 \le 0.3 x_1 + 0.2 x_2
+\]
+\[
+    y_1 \le 0.3 x_1 + 0.2 x_2
+\]
+\[
+    y_2 \le 0.2 x_1 + 0.25 x_2
+\]
+\[
+    y_3 \le 0.15 x_1 + 0.20 x_2
+\]
+\[
+    x_1 + x_2 + y_0 + y_1 + y_2 + y_3 \le 20000
+\]
+\[
+    0.3 x_1 + 0.2 x_2 - y_1 + 0.25 y_0 + 0.3 * y_1 \ge 3000
+\]
+\[
+    0.2 x_1 + 0.25 x_2 - y_2 + 0.15 y_0 + 0.3 y_1 + 0.4 y_2 \ge 3000
+\]
+\[
+    0.15 x_1 + 0.2 x_2 - y_3 + 0.2 y_0 + 0.2 y_1 + 0.3 y_2 + 0.5 y_3 \ge 2000
+\]
+\[
+    0.05 x_1 + 0.15 x_2 + 0.1 y_0 + 0.2 y_1 + 0.3 y_2 + 0.5 y_3 \ge 1000
+\]
+\[
+    0 \le x_i \quad \forall i \in {1,2}
+\]
+\[
+    0 \le y_j \quad \forall j \in {0,1,2,3}
+\]
+
+\end{enumerate}
+
+% ---------------------------------------------------
+% Anything after the \end{document} will be ignored by the typesetting.
+% ----------------------------------------------------
+
+\end{document}
