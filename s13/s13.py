@@ -69,7 +69,7 @@ def main():
 
     print('Number of constraints =', solver.NumConstraints())
 
-    # Create the objective function, 3 * x + y.
+    # Create the objective function
     objective = solver.Objective()
     objective.SetCoefficient(x0, -4 * 4 + -2 * 4 + -1 * 2 - 6)
     objective.SetCoefficient(x1, 7)
