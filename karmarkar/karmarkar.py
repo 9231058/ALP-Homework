@@ -29,7 +29,7 @@ def transform(current):
     core = np.linalg.inv(np.matmul(P, P.T))
     d = np.matmul(np.identity(n) - np.matmul(np.matmul(P.T, core), P), cp)
     print(f'direction {d}')
-    y = current - teta * d / (np.linalg.norm(d) * (n * (n - 1)) ** 0.5)
+    y = np.full((n), 1/n) - teta * d / (np.linalg.norm(d) * (n * (n - 1)) ** 0.5)
     print(f'y = {y}')
     r = np.matmul(D, y)
     return r / np.dot(np.ones(n), r)
